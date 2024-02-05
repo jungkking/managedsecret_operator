@@ -1,0 +1,19 @@
+apiVersion: webapp.test.com/v1
+kind: ManagedSecret
+metadata:
+  labels:
+    app.kubernetes.io/name: managedsecret
+    app.kubernetes.io/instance: managedsecret-sample
+    app.kubernetes.io/part-of: managedsecret
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: managedsecret
+  name: managedsecret-test1
+spec:
+  # TODO(user): Add fields here
+  secretName: test-secret
+  secretContent:
+    password: TestPassword!@#$
+    apikey: aaaaabcd1234567890
+  targetNamespaces:
+    - dev
+    - test
