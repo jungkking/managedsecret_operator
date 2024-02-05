@@ -1,0 +1,1 @@
+# managedsecret_operator
